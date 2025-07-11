@@ -15,8 +15,8 @@ source activate helitronscanner
 # unzip HelitronScanner.zip
 
 echo "Starting HelitronScanner scanHead and scanTail"
-HelitronScanner scanHead -g $1 -o "$2"_head -bs 0 -lf TrainingSet/head.lcvs
-HelitronScanner scanTail -g $1 -o "$2"_tail -bs 0 -lf TrainingSet/tail.lcvs
+HelitronScanner scanHead -g $1 -o "$2"_head -bs 0 -lf /mnt/apps/users/lwigley/TrainingSet/head.lcvs
+HelitronScanner scanTail -g $1 -o "$2"_tail -bs 0 -lf /mnt/apps/users/lwigley/TrainingSet/tail.lcvs
 
 echo "Starting HelitronScanner pairends"
 HelitronScanner pairends -hs "$2"_head -ts "$2"_tail -o "$2"_paired
